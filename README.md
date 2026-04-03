@@ -1,16 +1,98 @@
-# React + Vite
+# Gestor de Fidelidade Multiposto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sistema web para gestao e simulacao de programas de fidelidade em postos de combustivel. Permite configurar, calcular e analisar a viabilidade financeira de diferentes mecanicas de premiacao.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Roleta de Premios
 
-## React Compiler
+- Cadastro de premios com nome, probabilidade e custo unitario
+- Definicao de margem de lucro desejada e valor do ticket (por giro)
+- Calculo automatico do custo esperado por giro
+- Analise de viabilidade: compara receita esperada vs custo esperado
+- Validacao de probabilidades (soma deve ser 100%)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Catalogo de Pontos
 
-## Expanding the ESLint configuration
+- Cadastro de premios com nome, custo para o posto e pontos necessarios para resgate
+- Definicao do lucro medio por litro abastecido
+- Calculo automatico de litros necessarios para cada resgate
+- Analise de margem: mostra se o premio gera lucro ou prejuizo ao posto
+- Indicadores de viabilidade por premio
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Stack Tecnica
+
+| Tecnologia   | Versao   | Finalidade                    |
+|------------- |--------- |------------------------------ |
+| React        | 19.x     | Biblioteca de interface       |
+| Vite         | 8.x      | Bundler e dev server          |
+| Tailwind CSS | 4.x      | Estilizacao utilitaria        |
+| Lucide React | 1.x      | Icones                        |
+| ESLint       | 9.x      | Linting                       |
+
+## Requisitos
+
+- Node.js 18 ou superior
+- npm 9 ou superior
+
+## Instalacao
+
+```bash
+git clone https://github.com/mbu3no/gestor-fidelidade.git
+cd gestor-fidelidade
+npm install
+```
+
+## Uso
+
+### Desenvolvimento
+
+```bash
+npm run dev
+```
+
+Acesse `http://localhost:5173` no navegador.
+
+### Build de producao
+
+```bash
+npm run build
+```
+
+Os arquivos otimizados serao gerados na pasta `dist/`.
+
+### Preview do build
+
+```bash
+npm run preview
+```
+
+## Estrutura do Projeto
+
+```
+gestor-fidelidade/
+├── public/
+│   ├── favicon.svg
+│   └── icons.svg
+├── src/
+│   ├── App.jsx          # Componente principal com toda a logica
+│   ├── index.css         # Estilos globais e Tailwind
+│   └── main.jsx          # Ponto de entrada da aplicacao
+├── index.html            # Template HTML
+├── package.json
+├── vite.config.js
+├── tailwind.config.js
+└── eslint.config.js
+```
+
+## Persistencia de Dados
+
+Os dados sao armazenados no `localStorage` do navegador. Nao ha backend ou banco de dados — toda a informacao permanece local no dispositivo do usuario.
+
+## Temas
+
+A aplicacao suporta tema claro e escuro, com alternancia via botao na interface. A preferencia do usuario e salva no `localStorage`.
+
+## Licenca
+
+Uso interno. Todos os direitos reservados.
