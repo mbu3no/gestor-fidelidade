@@ -1,33 +1,33 @@
 # Gestor de Fidelidade Multiposto
 
-Sistema web para gestao e simulacao de programas de fidelidade em postos de combustivel. Permite configurar, calcular e analisar a viabilidade financeira de diferentes mecanicas de premiacao.
+Sistema web para gestão e simulação de programas de fidelidade em postos de combustível. Permite configurar, calcular e analisar a viabilidade financeira de diferentes mecânicas de premiação.
 
 ## Funcionalidades
 
-### Roleta de Premios
+### Roleta de Prêmios
 
-- Cadastro de premios com nome, probabilidade e custo unitario
-- Definicao de margem de lucro desejada e valor do ticket (por giro)
-- Calculo automatico do custo esperado por giro
-- Analise de viabilidade: compara receita esperada vs custo esperado
-- Validacao de probabilidades (soma deve ser 100%)
+- Cadastro de prêmios com nome, probabilidade e custo unitário
+- Definição de margem de lucro desejada e valor do ticket (por giro)
+- Cálculo automático do custo esperado por giro
+- Análise de viabilidade: compara receita esperada vs custo esperado
+- Validação de probabilidades (soma deve ser 100%)
 
-### Catalogo de Pontos
+### Catálogo de Pontos
 
-- Cadastro de premios com nome, custo para o posto e pontos necessarios para resgate
-- Definicao do lucro medio por litro abastecido
-- Calculo automatico de litros necessarios para cada resgate
-- Analise de margem: mostra se o premio gera lucro ou prejuizo ao posto
-- Indicadores de viabilidade por premio
+- Cadastro de prêmios com nome, custo para o posto e pontos necessários para resgate
+- Definição do lucro médio por litro abastecido
+- Cálculo automático de litros necessários para cada resgate
+- Análise de margem: mostra se o prêmio gera lucro ou prejuízo ao posto
+- Indicadores de viabilidade por prêmio
 
-## Stack Tecnica
+## Stack Técnica
 
-| Tecnologia   | Versao   | Finalidade                    |
+| Tecnologia   | Versão   | Finalidade                    |
 |------------- |--------- |------------------------------ |
 | React        | 19.x     | Biblioteca de interface       |
 | Vite         | 8.x      | Bundler e dev server          |
-| Tailwind CSS | 4.x      | Estilizacao utilitaria        |
-| Lucide React | 1.x      | Icones                        |
+| Tailwind CSS | 4.x      | Estilização utilitária        |
+| Lucide React | 1.x      | Ícones                        |
 | ESLint       | 9.x      | Linting                       |
 
 ## Requisitos
@@ -35,7 +35,7 @@ Sistema web para gestao e simulacao de programas de fidelidade em postos de comb
 - Node.js 18 ou superior
 - npm 9 ou superior
 
-## Instalacao
+## Instalação
 
 ```bash
 git clone https://github.com/mbu3no/gestor-fidelidade.git
@@ -53,13 +53,13 @@ npm run dev
 
 Acesse `http://localhost:5173` no navegador.
 
-### Build de producao
+### Build de produção
 
 ```bash
 npm run build
 ```
 
-Os arquivos otimizados serao gerados na pasta `dist/`.
+Os arquivos otimizados serão gerados na pasta `dist/`.
 
 ### Preview do build
 
@@ -75,9 +75,9 @@ gestor-fidelidade/
 │   ├── favicon.svg
 │   └── icons.svg
 ├── src/
-│   ├── App.jsx          # Componente principal com toda a logica
+│   ├── App.jsx          # Componente principal com toda a lógica
 │   ├── index.css         # Estilos globais e Tailwind
-│   └── main.jsx          # Ponto de entrada da aplicacao
+│   └── main.jsx          # Ponto de entrada da aplicação
 ├── index.html            # Template HTML
 ├── package.json
 ├── vite.config.js
@@ -85,14 +85,14 @@ gestor-fidelidade/
 └── eslint.config.js
 ```
 
-## Persistencia de Dados
+## Persistência de Dados
 
-Os dados sao armazenados no `localStorage` do navegador. Nao ha backend ou banco de dados — toda a informacao permanece local no dispositivo do usuario.
+Os dados são armazenados no `localStorage` do navegador. Não há backend ou banco de dados — toda a informação permanece local no dispositivo do usuário.
 
 ## Temas
 
-A aplicacao suporta tema claro e escuro, com alternancia via botao na interface. A preferencia do usuario e salva no `localStorage`.
+A aplicação suporta tema claro e escuro, com alternância via botão na interface. A preferência do usuário é salva no `localStorage`.
 
-## Licenca
+## Licença
 
 Uso interno. Todos os direitos reservados.
